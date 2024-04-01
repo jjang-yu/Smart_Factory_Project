@@ -1,0 +1,101 @@
+import cv2
+import numpy as np
+import math
+
+total_fps = 0.0  # 전체 프레임 속도의 합을 저장할 변수
+average_fps = 0.0  # 평균 프레임 속도를 저장할 변수
+cnt = 1  # 프레임 수를 카운트할 변수
+
+# 웹캠으로부터 영상을 캡처
+capture = cv2.VideoCapture(0)
+
+# 영상의 너비를 설정
+capture.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
+
+# 영상의 높이를 설정
+capture.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
+
+# 영상의 초당 프레임 수를 설정
+capture.set(cv2.CAP_PROP_FPS, 65)
+
+# 사각형과 원이 각각 감지되었는지 여부를 나타내는 변수들
+rac_detected = False
+cir_detected = False
+
+# 무한 루프
+while True:
+
+    start_time = cv2.getTickCount()  # 현재 시간을 가져와서 시작 시간으로 설정
+
+    ret, img = capture.read()  # 웹캠에서 영상 프레임을 읽음
+
+    if not ret:  # 만약 프레임을 제대로 읽지 못했다면 루프를 종료
+        break
+
+    edge_img = cv2.Canny(img, 25, 200)  # 가장자리 감지를 수행한 이미지 생성
+
+    contours, _ = cv2.findContours(edge_img, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)  # 윤곽선 찾기
+
+    for contour in contours:
+
+        approx = cv2.approxPolyDP(contour, cv2.arcLength(contour, True) * 0.02, True)  # 윤곽선 근사화
+
+        if len(approx) == 4 and abs(cv2.contourArea(approx)) > 1000 and cv2.isContourConvex(approx):
+            # 꼭지점이 4개이고 면적이 일정 크기 이상이며 볼록 다각형일 때
+
+            for i in range(4):
+                cv2.circle(img, tuple(approx[i][0]), 3, (255, 0, 0), 3)  # 꼭지점에 원 그리기
+
+            for i in range(4):
+                cv2.line(img, tuple(approx[i][0]), tuple(approx[(i + 1) % 4][0]), (0, 0, 255), 2)  # 선 그리기
+
+            cv2.imwrite('/home/nsf/사진/rectangle.jpg', img)  # 이미지 저장
+            rac_detected = True  # 사각형이 감지됨을 나타내는 변수를 True로 설정
+            print('외형 오류 없음')  # 외형 오류 없음을 출력
+            break  # 사각형이 감지되면 루프를 빠져나감
+
+    circles = cv2.HoughCircles(
+        edge_img, cv2.HOUGH_GRADIENT, dp=1, minDist=100, param1=200, param2=25, minRadius=30, maxRadius=50)
+
+    if circles is not None:
+        circles = np.round(circles[0, :]).astype("int")  # 검출된 원의 정보를 가져와서 반올림하고 정수형으로 변환
+
+        for (x, y, r) in circles:
+            cv2.circle(img, (x, y), r, (0, 255, 0), 3)  # 원 그리기
+
+        cir_detected = True  # 원이 감지됨을 나타내는 변수를 True로 설정
+        print('외형 오류!')  # 외형 오류를 출력
+        break  # 원이 감지되면 루프를 빠져나감
+
+    cv2.imshow("PreviewImage", img)  # 원본 이미지 표시
+    cv2.imshow("Edge", edge_img)  # 가장자리 감지된 이미지 표시
+
+    key = cv2.waitKey(1)  # 사용자 입력을 대기
+
+    if key > 10:  # 사용자가 키를 누르면 루프를 종료
+        break
+
+    if rac_detected:  # 만약 사각형이 감지되었다면 루프를 계속해서 돌아감
+        continue
+
+    end_time = cv2.getTickCount()  # 현재 시간을 가져와서 종료 시간으로 설정
+
+    elapsed_time = (end_time - start_time) / cv2.getTickFrequency()  # 경과 시간 계산
+
+    fps = 1.0 / elapsed_time  # 프레임 속도 계산
+
+    total_fps += fps  # 전체 프레임 속도에 현재 프레임 속도를 더함
+
+    average_fps = total_fps / cnt  # 평균 프레임 속도 계산
+
+    cnt += 1  # 프레임 수 카운트 증가
+
+    if cnt == 100:  # 만약 프레임 수가 100이 되면 초기화
+        cnt = 1
+        total_fps = 0.0
+
+    print(f"Elapsed T = {elapsed_time * 1000:.3f} ms, Frame = {fps:.3f} (fps), Avrg Frame Rate = {average_fps:.3f}")
+    # 경과 시간과 현재 프레임 속도, 평균 프레임 속도 출력
+
+capture.release()  # 캡처 해제
+cv2.destroyAllWindows()  # 윈도우 창 닫기
