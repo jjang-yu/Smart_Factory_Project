@@ -34,7 +34,7 @@ Raspberry pi4 B+
 #### 3d
 #### 실제
 #### 객체인식
-![객체 인식](https://github.com/jjang-yu/Smart_Factory_Project/assets/160578079/a5eff84b-354c-4724-b819-391ea5469813)
+<img src="/https://github.com/jjang-yu/Smart_Factory_Project/assets/160578079/a5eff84b-354c-4724-b819-391ea5469813"  width="640" height="480">
 
 ### 구성도
 #### S/W
