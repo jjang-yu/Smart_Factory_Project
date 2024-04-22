@@ -12,11 +12,16 @@
 객체인식 기술을 활용하여 물체 감지 시스템을 구축하고 해당 물체를 분류하는 서비스.
 
 ### 사용 부품
-Raspberry pi4 B+
+
+Raspberry pi4 B+, Arduino
 
 ### 사용 언어
 
+C, C++, Python
+
 ### 사용 서비스
+
+YOLOv5,OpenCV,PyTorch,MariaDB,Server,Database,Flask
 
 ### 분류 항목
 1. 이미지 분류(Yolov5)
@@ -34,6 +39,7 @@ Raspberry pi4 B+
 #### 3d
 #### 실제
 #### 객체인식
+![객체 인식](https://github.com/jjang-yu/Smart_Factory_Project/assets/160578079/888c4f6e-4acb-495d-b9d8-2b20849d4802)
 
 ### 구성도
 #### S/W
