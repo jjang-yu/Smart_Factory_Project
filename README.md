@@ -17,7 +17,7 @@ Raspberry pi4 B+, Arduino
 
 ### 사용 언어
 
-C, Python
+C, C++, Python
 
 ### 사용 서비스
 
