@@ -35,7 +35,47 @@ Raspberry Pi OS (Legacy, 64-bit), YOLOv5, OpenCV, PyTorch, Arduino IDE, MariaDB,
 
 ### 작동 원리
 
+1) 웹사이트 접속
+
+2) Raspberry Pi(serber) 부팅
+   - 부팅 시 Flask 서버 자동 실행
+
+3) 
+
 #### 실제
+
+#### 외부
+<img src="https://github.com/jjang-yu/Smart_Factory_Project/assets/160578079/e8302163-633d-450a-a181-717406558e0f" width="400" height="300"/>
+
+<img src="https://github.com/jjang-yu/Smart_Factory_Project/assets/160578079/4e0582db-38ff-4386-9e0a-c942ce7aba64" width="150" height="300"/>
+
+1-1) 파이캠
+1-2) 웹캠
+2)  제품 분류 서보모터
+3)  컨베이어 스텝모터
+4)  적외선 센서
+5)  로봇팔 서보모터
+6)  제품 카운트 스위치
+7)  타워램프
+8)  HMI Display
+
+#### 기계실 내부
+
+<img src="https://github.com/jjang-yu/Smart_Factory_Project/assets/160578079/9b8e01d2-1204-41c9-aa5e-d68f1db3a99a" width="400" height="300"/>
+
+<img src="https://github.com/jjang-yu/Smart_Factory_Project/assets/160578079/8bcb6b7f-eef4-4945-bfee-aee8cc53a714" width="150" height="200"/>
+
+<img src="https://github.com/jjang-yu/Smart_Factory_Project/assets/160578079/dd2a24d1-e731-4748-9acf-7bc5fefc9eb4" width="150" height="250"/>
+
+1) 타워램프 외부 전압 12V
+2) 컨베이어 스텝모터 드라이버 & 외부 전압 12V
+3) 라즈베리파이 (서버)
+4) 아두이노 (마스터) & PCB 기판
+5) 라즈베리파이 (객체 감지)
+6) HMI Display
+7) 아두이노 (슬레이브) & 쉴드
+
+
 #### 객체인식
 ![객체 인식](https://github.com/jjang-yu/Smart_Factory_Project/assets/160578079/888c4f6e-4acb-495d-b9d8-2b20849d4802)
 
