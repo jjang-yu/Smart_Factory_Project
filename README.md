@@ -49,9 +49,9 @@ Raspberry Pi OS (Legacy, 64-bit), YOLOv5, OpenCV, PyTorch, Arduino IDE, MariaDB,
 
 <img src="https://github.com/jjang-yu/Smart_Factory_Project/assets/160578079/4e0582db-38ff-4386-9e0a-c942ce7aba64" width="200" height="300"/>
 
-1-1) 파이캠
+ 1-1) 파이캠
 
-1-2) 웹캠
+ 1-2) 웹캠
 
 2)  제품 분류 서보모터
  
