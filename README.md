@@ -39,7 +39,9 @@ Raspberry Pi OS (Legacy, 64-bit), YOLOv5, OpenCV, PyTorch, Arduino IDE, MariaDB,
 
 2) Raspberry Pi(serber) 부팅
    -부팅 시 Flask 서버 자동 실행
+   
    #자동실행 방법
+   
     sudo vim /etc/xdg/lxsession/LXDE-pi/autostart
 
 4) 
