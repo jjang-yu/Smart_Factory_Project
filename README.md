@@ -62,6 +62,10 @@ Raspberry Pi OS (Legacy, 64-bit), YOLOv5, OpenCV, PyTorch, Arduino IDE, MariaDB,
 >- 1) 제품이 적외선 센서에 감지되면 컨베이어 벨트 가동 중지
 >- 2) PiCamera를 통해 외형 및 QRcode 리딩, 서버에서 QR_Shape.sh 파일 실행 후 QR_Shape.py를 실행하여 도출 결과값 서버로 전송
 >- 3) 서버에서 Detect.sh 파일 실행 후 Detect.py 파일 실행하여 WebCam을 통해 이미지 및 색상 감지가 되면 도출 결과값 1초마다 서버로 전송
+>  3-1) Detect.py 실행 명령어
+>     ```
+>     python3 detect.py --weight dataset/best.pt --source 1 --img 320 --data dataset/data.yaml
+>     ```
 >- 4)  결과값을 전부 받으면 컨베이어 벨트 재가동
 >- 5)  각 구역으로 분류
 >- 6)  분류 시 스위치 센서를 통해 제품 카운트 업데이트
