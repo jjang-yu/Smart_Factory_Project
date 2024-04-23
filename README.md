@@ -42,7 +42,7 @@ Raspberry Pi OS (Legacy, 64-bit), YOLOv5, OpenCV, PyTorch, Arduino IDE, MariaDB,
 
 3) 
 
-#### 실제
+### 실제
 
 #### 외부
 <img src="https://github.com/jjang-yu/Smart_Factory_Project/assets/160578079/e8302163-633d-450a-a181-717406558e0f" width="400" height="300"/>
