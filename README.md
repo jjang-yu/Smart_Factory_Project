@@ -47,7 +47,7 @@ Raspberry Pi OS (Legacy, 64-bit), YOLOv5, OpenCV, PyTorch, Arduino IDE, MariaDB,
 #### 외부
 <img src="https://github.com/jjang-yu/Smart_Factory_Project/assets/160578079/e8302163-633d-450a-a181-717406558e0f" width="400" height="300"/>
 
-<img src="https://github.com/jjang-yu/Smart_Factory_Project/assets/160578079/4e0582db-38ff-4386-9e0a-c942ce7aba64" width="150" height="300"/>
+<img src="https://github.com/jjang-yu/Smart_Factory_Project/assets/160578079/4e0582db-38ff-4386-9e0a-c942ce7aba64" width="200" height="300"/>
 
 1-1) 파이캠
 1-2) 웹캠
