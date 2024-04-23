@@ -63,7 +63,7 @@ Raspberry Pi OS (Legacy, 64-bit), YOLOv5, OpenCV, PyTorch, Arduino IDE, MariaDB,
 
 <img src="https://github.com/jjang-yu/Smart_Factory_Project/assets/160578079/9b8e01d2-1204-41c9-aa5e-d68f1db3a99a" width="400" height="300"/>
 
-<img src="https://github.com/jjang-yu/Smart_Factory_Project/assets/160578079/8bcb6b7f-eef4-4945-bfee-aee8cc53a714" width="150" height="300"/>
+<img src="https://github.com/jjang-yu/Smart_Factory_Project/assets/160578079/8bcb6b7f-eef4-4945-bfee-aee8cc53a714" width="200" height="300"/>
 
 <img src="https://github.com/jjang-yu/Smart_Factory_Project/assets/160578079/dd2a24d1-e731-4748-9acf-7bc5fefc9eb4" width="150" height="300"/>
 
