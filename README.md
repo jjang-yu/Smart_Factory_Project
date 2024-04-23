@@ -29,15 +29,13 @@ Raspberry Pi OS (Legacy, 64-bit), YOLOv5, OpenCV, PyTorch, Arduino IDE, MariaDB,
 3. 외형 분류(Opencv)
 4. QRcode 인식(Opencv)
 
-# 프로젝트 실행
-
 # 프로젝트 설명
 
 ### 작동 원리
 
 >1) 웹사이트 접속
 >
->2) Raspberry Pi(serber) 부팅
+>2) Raspberry Pi(server) 부팅
 >   -부팅 시 Flask 서버 자동 실행
 >   #자동실행 방법
 >   - sudo vim /etc/xdg/lxsession/LXDE-pi/autostart
