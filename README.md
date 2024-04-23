@@ -13,7 +13,7 @@
 
 ### 사용 부품
 
-Raspberry pi4 B+, Arduino, LCD, PiCamera V2, WebCam APC480
+Raspberry pi4 B+, Arduino, LCD, PiCamera V2, WebCam(APC480)
 
 ### 사용 언어
 
