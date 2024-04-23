@@ -41,7 +41,7 @@ Raspberry Pi OS (Legacy, 64-bit), YOLOv5, OpenCV, PyTorch, Arduino IDE, MariaDB,
    -부팅 시 Flask 서버 자동 실행
    
    #자동실행 방법
-    sudo vim /etc/xdg/lxsession/LXDE-pi/autostart
+   - sudo vim /etc/xdg/lxsession/LXDE-pi/autostart
    ``` Python
    #Flask app.py 실행
    @lxterminal -e python /var/www/nsfweb/app.py
