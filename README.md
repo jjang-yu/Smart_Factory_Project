@@ -21,7 +21,7 @@ C, C++, Python
 
 ### 사용 서비스
 
-YOLOv5, OpenCV, PyTorch, Arduino IDE, MariaDB, Workbench, Database, Flask
+Raspberry Pi OS (Legacy, 64-bit), YOLOv5, OpenCV, PyTorch, Arduino IDE, MariaDB, Workbench, Database, Flask
 
 ### 분류 항목
 1. 이미지 분류(Yolov5)
