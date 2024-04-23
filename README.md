@@ -44,4 +44,4 @@ YOLOv5, OpenCV, PyTorch, Arduino IDE, MariaDB, Workbench, Database, Flask
 #### H/W
 
 ### 회로도
-<img src="https://github.com/jjang-yu/Smart_Factory_Project/assets/160578079/f1233be5-0b6b-4e00-8388-fda183c82527" width="200" height="400"/>
+<img src="https://github.com/jjang-yu/Smart_Factory_Project/assets/160578079/f1233be5-0b6b-4e00-8388-fda183c82527" width="800" height="600"/>
