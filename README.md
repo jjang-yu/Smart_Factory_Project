@@ -6,7 +6,7 @@
 
 장유정: [Github](https://github.com/jjang-yu)
         
-직무
+>- 직무
 >- 웹캠 이미지, 색상 오류 기능 개발(YOLOv5)
 >- 파이캠 외형, QR코드 오류 기능 개발(OpenCV)
 >- 이미지 촬영, 라벨링(Roblflow)
